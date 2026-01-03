@@ -9,5 +9,8 @@ run:
 	g++ -c src/Area.cpp -o src/executable/Area.o
 	g++ -c src/main.cpp -o src/executable/main.o
 
-	g++ src/executable/Point.o src/executable/Line.o src/executable/Shape.o src/executable/Pixel.o src/executable/main.o src/executable/Polygon.o src/executable/Area.o src/executable/Circle.o -o src/executable/programme.exe
+	g++ -c src/Rectangle.cpp -o src/executable/Rectangle.o
+	g++ -c src/Square.cpp -o src/executable/Square.o
+
+	g++ src/executable/Rectangle.o src/executable/Square.o src/executable/Point.o src/executable/Line.o src/executable/Shape.o src/executable/Pixel.o src/executable/main.o src/executable/Polygon.o src/executable/Area.o src/executable/Circle.o -o src/executable/programme.exe
 	./src/executable/programme.exe
