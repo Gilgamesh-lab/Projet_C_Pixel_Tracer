@@ -2,6 +2,8 @@
 
 # define RECTANGLE_H
 # include "Shape.h"
+#include "Point.h"
+#include "Pixel.h"
 class Rectangle : public Shape {
     private:
         Point topLeft;

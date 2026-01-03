@@ -1,6 +1,7 @@
 # ifndef LINE_H
 # define LINE_H
 # include "Shape.h"
+#include "Point.h"
 
 class Line : public Shape {
     private:

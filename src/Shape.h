@@ -1,29 +1,25 @@
-# ifndef SHAPE_H
-# define SHAPE_H
-# include <iostream>
-# include <vector>
-# include "Point.h"
+#ifndef SHAPE_H
+#define SHAPE_H
+
+#include <vector>
 #include "Pixel.h"
 
 // Déclaration anticipée
-
-//class Pixel;
+class Pixel;
 
 class Shape {
+protected:
+    int id;
+    static int nextId;
 
-    protected:
-        int id;
-        static int nextId;
-    public:
-        // Constructeur
-        Shape();
-        // Destructeur virtuel
-        virtual ~Shape() = default;
-        // Méthodes virtuelles pures (classe abstraite)
-        virtual void print() const = 0;
-        virtual std::vector<Pixel> toPixels() const = 0;
+public:
+    Shape();
+    virtual ~Shape() = default;
 
-        // Getter
-        int getId() const { return id; }
+    virtual void print() const = 0;
+    virtual std::vector<Pixel> toPixels() const = 0;
+
+    int getId() const { return id; }
 };
-# endif // SHAPE_H
+
+#endif // SHAPE_H

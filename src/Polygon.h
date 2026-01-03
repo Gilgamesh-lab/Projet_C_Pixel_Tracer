@@ -2,6 +2,7 @@
 # define POLYGON_H
 # include "Shape.h"
 # include <vector>
+#include "Point.h"
 class Polygon : public Shape {
     private:
         std::vector<Point> points;
